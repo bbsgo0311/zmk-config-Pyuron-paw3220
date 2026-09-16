@@ -11,7 +11,19 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        btn1 {
+            bindings = <&mkp MB1>;
+            key-positions = <16 17>;
+        };
+
+        btn2 {
+            bindings = <&mkp MB2>;
+            key-positions = <17 18>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
