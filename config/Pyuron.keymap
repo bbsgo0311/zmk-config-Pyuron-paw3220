@@ -14,24 +14,14 @@
     combos {
         compatible = "zmk,combos";
 
-        btn1-R {
+        btn1 {
             bindings = <&mkp MB1>;
             key-positions = <16 17>;
         };
 
-        btn2-R {
+        btn2 {
             bindings = <&mkp MB2>;
             key-positions = <17 18>;
-        };
-
-        btn1-L {
-            bindings = <&mkp MB1>;
-            key-positions = <13 12>;
-        };
-
-        btn2-L {
-            bindings = <&mkp MB2>;
-            key-positions = <12 11>;
         };
     };
 
@@ -81,19 +71,19 @@
 
         layer_2 {
             bindings = <
-&trans                    &kp RA(RG(NUMBER_1))  &kp RA(RG(NUMBER_2))  &kp RA(RG(NUMBER_3))  &trans  &trans  &kp RG(LEFT_ARROW)  &kp UP_ARROW          &kp LG(RIGHT)         &kp LG(PLUS)
-&trans                    &kp RA(RG(NUMBER_4))  &kp RA(RG(NUMBER_5))  &kp RA(RG(NUMBER_6))  &trans  &trans  &kp LEFT            &kp DOWN_ARROW        &kp RIGHT_ARROW       &kp LG(MINUS)
-&trans                    &kp RA(RG(NUMBER_7))  &kp RA(RG(NUMBER_8))  &kp RA(RG(NUMBER_9))  &trans  &trans  &trans              &kp LG(LS(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LG(LC(LS(NUMBER_4)))
-&kp LS(LG(LC(NUMBER_5)))  &trans                &trans                &trans                &trans  &trans  &trans              &trans                &trans                &trans
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS      &trans     &kp RG(LEFT_ARROW)    &kp UP_ARROW          &kp LG(RIGHT)             &kp LG(PLUS)
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &trans     &kp LEFT              &kp DOWN_ARROW        &kp RIGHT_ARROW           &kp LG(MINUS)
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL  &kp LG(LS(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LS(LG(LC(NUMBER_4)))  &kp LG(LC(LS(NUMBER_5)))
+&trans                      &trans           &trans           &trans           &trans        &trans     &trans                &trans                &trans                    &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                  &trans          &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans  &trans  &trans  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans  &trans  &trans  &trans  &trans
             >;
         };
 
